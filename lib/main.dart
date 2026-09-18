@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_30_days_plan/days05/provider/countor_provider.dart';
 import 'package:flutter_30_days_plan/days06/bloc/todo_bloc.dart';
 import 'package:flutter_30_days_plan/days06/days06.dart';
+import 'package:flutter_30_days_plan/days07/bloc/photos_bloc.dart';
+import 'package:flutter_30_days_plan/days07/days07.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    BlocProvider(create: (_) => TodoBloc(), child: const MyApp()),
+    BlocProvider(create: (_) => PhotosBloc(), child: const MyApp()),
+    //  BlocProvider(create: (_) => TodoBloc(), child: const MyApp()),
     // ChangeNotifierProvider(
     //   create: (_) => CountorProvider(),
     //   child: const MyApp(),
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
         fontFamily: "Montserrat",
       ),
-      home: Days06(),
+      home: Days07(),
       debugShowCheckedModeBanner: false,
     );
   }
